@@ -10,3 +10,7 @@ jobs:
      # Unique stage names are recommended.
      - stage: "DEPLOY MY APP"
        script: npm install
+     - stage: "Run Tests & SonarCloud Analysis"
+       script:
+         - npm test
+         - sonar-scanner -Dsonar.projectKey=$SONAR_PROJECT_KEY
