@@ -1,0 +1,12 @@
+# Node.js .travis.yml sample
+language: node_js
+node_js:
+   - "10"
+jobs:
+   include:
+     # You can name your stages.
+     - stage: "RUN MY TESTS"
+       script: npm test
+     # Unique stage names are recommended.
+     - stage: "DEPLOY MY APP"
+       script: npm install
