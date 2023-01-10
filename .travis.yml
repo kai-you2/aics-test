@@ -14,3 +14,8 @@ jobs:
        script:
          - npm test
          - sonar-scanner -Dsonar.projectKey=$SONAR_PROJECT_KEY
+addons:
+   sonarcloud:
+     organization: "asus-aics"
+     token:
+       secure: 293d305c61dc812479bf3dfab3e4e63223fadab3
